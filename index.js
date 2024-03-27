@@ -8,16 +8,15 @@ app.use(cors());
 require("dotenv").config();
 
 const multer = require("multer");
-const upload = multer({ dest: "uploads/" });
+const upload = multer({ dest: "tmp/uploads" });
 const path = require("path");
 
 const fs = require("fs");
-const directoryPath = "./uploads";
+const directoryPath = "/tmp/uploads";
 
 if (!fs.existsSync(directoryPath)) {
-  fs.mkdirSync(directoryPath);
-
- }
+  fs.mkdirSync(directoryPath, { recursive: true });
+}
 
 const mongoose = require("mongoose");
 const {
@@ -80,7 +79,7 @@ app.post("/generate-pdf", async (req, res) => {
     });
 });
 
-app.use("/uploads", express.static(path.join(__dirname, "uploads")));
+app.use("/tmp/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.get("/message", (req, res) => {
   res.json({ message: "Hello from server!" });

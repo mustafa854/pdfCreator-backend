@@ -46,7 +46,7 @@ const generatePDF = async (newName, selectedPages, originalPdfId) => {
     //   `http://localhost/uploads/${originalPdfId}`
     // );
     console.log(originalPdfId);
-    const pdfData = await fs.readFile(`uploads/${originalPdfId}`);
+    const pdfData = await fs.readFile(`tmp/uploads/${originalPdfId}`);
     const srcDoc = await PDFDocument.load(pdfData);
     // console.log(srcDoc);
     const copiedPages = await newPdfDoc.copyPages(srcDoc, selectedPages);
@@ -61,7 +61,7 @@ const generatePDF = async (newName, selectedPages, originalPdfId) => {
 
     try {
       const newFileID = crypto.randomUUID();
-      await fs.writeFile(`uploads/${newFileID}.pdf`, pdfBytes);
+      await fs.writeFile(`tmp/uploads/${newFileID}.pdf`, pdfBytes);
       console.log("File saved successfully!", newFileID);
       const doc = await PDF.findOne({ originalPdfId });
       console.log(
