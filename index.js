@@ -14,6 +14,7 @@ const multer = require("multer");
 const upload = multer({ dest: "tmp/uploads" });
 const path = require("path");
 
+<<<<<<< HEAD
 const fs = require("fs");
 const directoryPath = "/tmp/uploads";
 
@@ -21,6 +22,8 @@ if (!fs.existsSync(directoryPath)) {
   fs.mkdirSync(directoryPath, { recursive: true });
 }
 
+=======
+>>>>>>> parent of 99bc26f (removed uploads/ and added code to create uploads/ if doesn't exists)
 const mongoose = require("mongoose");
 const {
   createOriginalPDF,
