@@ -4,9 +4,7 @@ loading skeletons
 
 ------------------------------------
 
-comments | read me | documentation
-original file with all the custom file----- detail view page--------------------------- and all files list
-
+comments |  documentation
 
 
 dashboard
@@ -29,8 +27,8 @@ Home Page
 Mobile View
 Change Button and other colors
 deployment
-
-
+original file with all the custom file----- detail view page--------------------------- and all files list
+read me
 
 
 
