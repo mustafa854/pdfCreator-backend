@@ -1,0 +1,51 @@
+loading skeletons
+
+Home Page*******************(1)
+
+Mobile View****************(2)
+
+Change Button and other colors******************************(3)
+
+------------------------------------
+
+comments | read me | documentation
+
+
+dashboard
+guest edit****************(4)
+user files allotment
+user auth***********************
+original file with all the custom file----- detail view page--------------------------- and all files list
+login, signup page**************************(5)
+
+deployment****************************(6)-----------------------------------------------
+add frontend and backend tests
+
+on pages render, renderthem in set for like 10 15 for better performance and on scroll render others
+
+----------------------------------
+
+
+
+Completed
+add loader on pdf generation
+progress bar
+
+
+
+
+
+
+
+
+---server side logic----
+page number----------------validation logic
+file format validation logic
+add file name below the downlaod button on download page
+select all checkbox
+slect or deselect checkbx based on the state as we can use select all also(make checkbox controlled element)
+loader counter on file upload and also make its border like spinner, i.e. rotating, change to right
+
+
+
+
