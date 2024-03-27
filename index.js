@@ -11,7 +11,7 @@ require("dotenv").config();
 
 
 const multer = require("multer");
-const upload = multer({ dest: "tmp/uploads" });
+const upload = multer({ dest: "uploads" });
 const path = require("path");
 
 const mongoose = require("mongoose");
@@ -75,7 +75,7 @@ app.post("/generate-pdf", async (req, res) => {
     });
 });
 
-app.use("/tmp/uploads", express.static(path.join(__dirname, "uploads")));
+app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
 app.get("/message", (req, res) => {
   res.json({ message: "Hello from server!" });
