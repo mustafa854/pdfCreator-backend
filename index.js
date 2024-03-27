@@ -11,6 +11,14 @@ const multer = require("multer");
 const upload = multer({ dest: "uploads/" });
 const path = require("path");
 
+const fs = require("fs");
+const directoryPath = "./uploads";
+
+if (!fs.existsSync(directoryPath)) {
+  fs.mkdirSync(directoryPath);
+
+ }
+
 const mongoose = require("mongoose");
 const {
   createOriginalPDF,
