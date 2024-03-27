@@ -1,11 +1,17 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
-
+const corsOptions = {
+  origin: "http://localhost:3000", // frontend URI (ReactJS)
+  origin: "https://pdf-extractor-85ka737s8-mustafa854.vercel.app", // frontend URI (ReactJS)
+};
 const cors = require("cors");
-app.use(cors());
+app.use(cors(corsOptions));
 
 require("dotenv").config();
+
+
+
 
 const multer = require("multer");
 const upload = multer({ dest: "tmp/uploads" });
