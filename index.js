@@ -89,10 +89,10 @@ app.get("/message", (req, res) => {
   res.json({ message: "Hello from server!" });
 });
 
-// app.get("/", async (req, res) => {
-//   createOriginalPDF();
-//   console.log("hi");
-// });
+app.get("/", async (req, res) => {
+  
+res.json({message:"works"})
+});
 
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
