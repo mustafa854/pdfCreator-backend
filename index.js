@@ -19,6 +19,7 @@ const {
   createOriginalPDF,
   getOriginalPDF,
   generatePDF,
+  getAllPdf,
 } = require("./utils/originalPDF");
 // const getOriginalPDF = require("./utils/originalPDF");
 
@@ -74,6 +75,13 @@ app.post("/generate-pdf", async (req, res) => {
       res.status(500).send("Internal Server error!");
     });
 });
+
+
+app.get("/pdfs", async (req, res)=>{
+ const allPdf = await getAllPdf()
+ res.json(allPdf)
+})
+
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 

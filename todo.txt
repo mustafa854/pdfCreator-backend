@@ -1,24 +1,19 @@
 loading skeletons
 
-Home Page*******************(1)
 
-Mobile View****************(2)
-
-Change Button and other colors******************************(3)
 
 ------------------------------------
 
 comments | read me | documentation
+original file with all the custom file----- detail view page--------------------------- and all files list
+
 
 
 dashboard
 guest edit****************(4)
 user files allotment
 user auth***********************
-original file with all the custom file----- detail view page--------------------------- and all files list
 login, signup page**************************(5)
-
-deployment****************************(6)-----------------------------------------------
 add frontend and backend tests
 
 on pages render, renderthem in set for like 10 15 for better performance and on scroll render others
@@ -30,8 +25,10 @@ on pages render, renderthem in set for like 10 15 for better performance and on 
 Completed
 add loader on pdf generation
 progress bar
-
-
+Home Page
+Mobile View
+Change Button and other colors
+deployment
 
 
 

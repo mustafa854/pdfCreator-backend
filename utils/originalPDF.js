@@ -41,10 +41,6 @@ const generatePDF = async (newName, selectedPages, originalPdfId) => {
   try {
     const newPdfDoc = await PDFDocument.create();
     console.log("1");
-    // const  = await PDFDocument.load();
-    // const srcDoc = await PDFDocument.load(
-    //   `http://localhost/uploads/${originalPdfId}`
-    // );
     console.log(originalPdfId);
     const pdfData = await fs.readFile(`uploads/${originalPdfId}`);
     const srcDoc = await PDFDocument.load(pdfData);
@@ -86,13 +82,21 @@ const generatePDF = async (newName, selectedPages, originalPdfId) => {
   } catch (e) {
     console.error(e);
   }
-
-  /**
-   *
-   * SAVE TO MONGODB AND RETURN RESPONSE
-   *
-   */
 };
 
-module.exports = { createOriginalPDF, getOriginalPDF, generatePDF };
+
+
+const getAllPdf = async () =>{
+  try{
+
+    const response = await PDF.find({})
+    return response
+
+  }catch(e){
+
+  }
+
+}
+
+module.exports = { createOriginalPDF, getOriginalPDF, generatePDF, getAllPdf };
 // module.exports = getOriginalPDF;
