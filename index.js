@@ -1,11 +1,9 @@
 const express = require("express");
 const app = express();
 app.use(express.json());
-const corsOptions = {
-  origin: "https://pdf-extractor-bice.vercel.app/", 
-};
+
 const cors = require("cors");
-app.use(cors(corsOptions));
+app.use(cors());
 
 require("dotenv").config();
 
